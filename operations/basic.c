@@ -1,5 +1,5 @@
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	swap(t_stack *a) // Swap top 2 of stack
 {

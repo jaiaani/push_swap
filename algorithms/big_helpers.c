@@ -74,3 +74,22 @@ int	get_max_bits(int size)
 		bits++;
 	return (bits);
 }
+
+void	radix_pass(t_stack *a, t_stack *b, int bit)
+{
+	int	i;
+	int	size;
+
+	size = a->size;
+	i = 0;
+	while (i < size)
+	{
+		if (((a->top->index >> bit) & 1) == 0)
+			pb(a, b);
+		else
+			ra(a);
+		i++;
+	}
+	while (b->size)
+		pa(a, b);
+}

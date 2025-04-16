@@ -12,6 +12,12 @@ void rb(t_stack *b)
 	write(1, "rb\n", 3);
 }
 
+void rrb(t_stack *b)
+{
+	rev_rotate(b);
+	write(1, "rb\n", 3);
+}
+
 void pb(t_stack *a, t_stack *b)
 {
 	push(a, b);

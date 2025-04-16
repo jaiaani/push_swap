@@ -17,21 +17,21 @@ void	sort_3(t_stack *a)
 	s = a->top->next->value;
 	t = a->bottom->value;
 	if (f > s && s < t && f < t)
-		swap(a);
+		sa(a);
 	else if (f > s && s > t)
 	{
-		swap(a);
-		rev_rotate(a);
+		sa(a);
+		ra(a);
 	}
 	else if (f > s && s < t && f > t)
-		rotate(a);
+		ra(a);
 	else if (f < s && s > t && f < t)
 	{
-		swap(a);
-		rotate(a);
+		sa(a);
+		ra(a);
 	}
 	else if (f < s && s > t && f > t)
-		rev_rotate(a);
+		rra(a);
 }
 
 
@@ -42,9 +42,9 @@ void	sort_4(t_stack *a, t_stack *b)
 
 	min = find_min_node(a);
 	move_to_top(a, min);
-	push(a, b);
+	pb(a, b);
 	sort_3(a);
-	push(b, a);
+	pa(a, b);
 }
 
 void	sort_5(t_stack *a, t_stack *b)
@@ -53,11 +53,11 @@ void	sort_5(t_stack *a, t_stack *b)
 
 	min = find_min_node(a);
 	move_to_top(a, min);
-	push(a, b);
+	pb(a, b);
 	min = find_min_node(a);
 	move_to_top(a, min);
-	push(a, b);
+	pb(a, b);
 	sort_3(a);
-	push(b, a);
-	push(b, a);
+	pa(a, b);
+	pa(a, b);
 }

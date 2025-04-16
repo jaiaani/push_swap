@@ -1,7 +1,10 @@
 # Variables
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = 
+SRCS = algorithms/small_helpers.c  algorithms/small_set.c algorithms/big_helpers.c algorithms/big_set.c algorithms/sort_stack.c \
+		input/utils.c input/validation.c input/parse.c \
+		operations/basic.c operations/shared.c operations/stack_a.c operations/stack_b.c \
+		stack_utils.c main.c
 OBJS = $(SRCS:.c=.o)
 LIBS = -Llibs/libft -llibft
 

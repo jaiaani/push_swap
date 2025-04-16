@@ -13,6 +13,13 @@ void ra(t_stack *a)
 	write(1, "ra\n", 3);
 }
 
+void rra(t_stack *a)
+{
+	rev_rotate(a);
+	write(1, "ra\n", 3);
+}
+
+
 
 void pa(t_stack *a, t_stack *b)
 {

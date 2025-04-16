@@ -12,8 +12,5 @@ void	sort_stack(t_stack *a, t_stack *b)
 	else if (a->size == 5)
 		sort_5(a, b);
 	else
-	{
-		normalize(a);
 		radix_sort(a, b);
-	}
 }
