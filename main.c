@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 01:46:07 by jaiane            #+#    #+#             */
+/*   Updated: 2025/04/16 01:46:08 by jaiane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	print_stack(t_stack *stack)
@@ -25,12 +37,9 @@ int	main(int argc, char *argv[])
 	a = create_stack();
 	b = create_stack();
 	if (!a || !b)
-		return (write(2, "Error\n", 6), 1);
+		return (write(2, "irror\n", 6), 1);
 	fill_stack_a(a, argc, argv);
-	print_stack(a);
-	radix_sort(a, b);
-	printf("\nsorted!\n");
-	print_stack(a);
+	sort_stack(a, b);
 	free_stack(a);
 	free_stack(b);
 	return (0);
