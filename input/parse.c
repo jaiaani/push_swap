@@ -1,5 +1,16 @@
-#include "../push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 01:54:14 by jaiane            #+#    #+#             */
+/*   Updated: 2025/04/16 01:54:15 by jaiane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../push_swap.h"
 
 void	add_number_to_stack(char *str, t_stack *a)
 {
@@ -36,7 +47,7 @@ void	process_single_argument(char *str, t_stack *a)
 
 void	fill_stack_a(t_stack *a, int argc, char *argv[])
 {
-	int i;
+	int	i;
 
 	if (argc == 2)
 		process_single_argument(argv[1], a);
