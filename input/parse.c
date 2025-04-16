@@ -33,6 +33,8 @@ void	process_single_argument(char *str, t_stack *a)
 	int		i;
 	char	**split;
 
+	if (ft_strlen(str) < 2)
+		free_and_exit(a);
 	split = ft_split(str, ' ');
 	if (!split)
 		free_and_exit(a);

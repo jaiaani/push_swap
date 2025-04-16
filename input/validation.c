@@ -28,15 +28,16 @@ bool	has_duplicates(t_stack *stack, int value)
 
 bool	is_valid_number(char *str)
 {
-	if (!str || *str == '\0')
-		return (false);
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str)
+	int	i;
+
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while(str[i])
 	{
-		if (*str < '0' || *str > '9')
+		if (str[i] < '0' || str[i] > '9')
 			return (false);
-		str++;
+		i++;
 	}
 	return (true);
 }

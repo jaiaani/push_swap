@@ -12,8 +12,26 @@
 
 #include "../push_swap.h"
 
+bool	is_sorted(t_stack *stack)
+{
+	t_node	*current;
+
+	if (!stack || stack->size < 2)
+		return (true);
+	current = stack->top;
+	while (current->next)
+	{
+		if (current->value > current->next->value)
+			return (false);
+		current = current->next;
+	}
+	return (true);
+}
+
 void	sort_stack(t_stack *a, t_stack *b)
 {
+	if (is_sorted(a))
+		return ;
 	if (a->size == 2)
 		sort_2(a);
 	else if (a->size == 3)
