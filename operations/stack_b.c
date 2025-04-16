@@ -27,7 +27,7 @@ void	rb(t_stack *b)
 void	rrb(t_stack *b)
 {
 	rev_rotate(b);
-	write(1, "rb\n", 3);
+	write(1, "rrb\n", 4);
 }
 
 void	pb(t_stack *a, t_stack *b)

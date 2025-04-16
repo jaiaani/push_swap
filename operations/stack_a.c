@@ -27,7 +27,7 @@ void	ra(t_stack *a)
 void	rra(t_stack *a)
 {
 	rev_rotate(a);
-	write(1, "ra\n", 3);
+	write(1, "rra\n", 4);
 }
 
 void	pa(t_stack *a, t_stack *b)

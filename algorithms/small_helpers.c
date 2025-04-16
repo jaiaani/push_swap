@@ -42,8 +42,8 @@ void	move_to_top(t_stack *a, t_node *target)
 	}
 	if (pos <= a->size / 2)
 		while (a->top != target)
-			rotate(a);
+			ra(a);
 	else
 		while (a->top != target)
-			rev_rotate(a);
+			rra(a);
 }
