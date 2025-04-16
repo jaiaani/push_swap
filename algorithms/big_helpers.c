@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   big_helpers.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 01:52:36 by jaiane            #+#    #+#             */
+/*   Updated: 2025/04/16 01:52:38 by jaiane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	sort_array(int *array, int size)
@@ -31,7 +43,7 @@ void	sort_array(int *array, int size)
 void	copy_stack_to_array(t_stack *a, int *array)
 {
 	t_node	*node;
-	int	i;
+	int		i;
 
 	node = a->top;
 	i = 0;
@@ -45,8 +57,8 @@ void	copy_stack_to_array(t_stack *a, int *array)
 
 void	index_stack_values(t_stack *a, int *array)
 {
-	t_node *node;
-	int	i;
+	t_node	*node;
+	int		i;
 
 	node = a->top;
 	while (node)
@@ -67,7 +79,7 @@ void	index_stack_values(t_stack *a, int *array)
 
 int	get_max_bits(int size)
 {
-	int bits;
+	int	bits;
 
 	bits = 0;
 	while ((size - 1) >> bits)
