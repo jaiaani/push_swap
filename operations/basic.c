@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   basic.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 01:49:36 by jaiane            #+#    #+#             */
+/*   Updated: 2025/04/16 01:51:40 by jaiane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap(t_stack *a) // Swap top 2 of stack
+void	swap(t_stack *a)
 {
-	t_node *first;
-	t_node *second;
+	t_node	*first;
+	t_node	*second;
 
 	if (!a || a->size < 2)
 		return ;
@@ -19,12 +30,11 @@ void	swap(t_stack *a) // Swap top 2 of stack
 	a->top = second;
 	if (a->size == 2)
 		a->bottom = first;
-	
 }
 
-void	rotate(t_stack *a) // move top of stack to bottom
+void	rotate(t_stack *a)
 {
-	t_node *first;
+	t_node	*first;
 
 	if (!a || a->size < 2)
 		return ;
@@ -37,9 +47,9 @@ void	rotate(t_stack *a) // move top of stack to bottom
 	a->bottom = first;
 }
 
-void	rev_rotate(t_stack *a) // move bottom of stack to top
+void	rev_rotate(t_stack *a)
 {
-	t_node *last;
+	t_node	*last;
 
 	if (!a || a->size < 2)
 		return ;
