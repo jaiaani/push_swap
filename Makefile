@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = $(wildcard *.c)
+SRCS = 
 OBJS = $(SRCS:.c=.o)
 LIBS = -Llibs/libft -llibft
 

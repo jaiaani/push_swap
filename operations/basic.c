@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jaiane <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 21:13:07 by jaiane            #+#    #+#             */
-/*   Updated: 2025/04/15 23:06:07 by jaiane           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -30,6 +19,7 @@ void	swap(t_stack *a) // Swap top 2 of stack
 	a->top = second;
 	if (a->size == 2)
 		a->bottom = first;
+	
 }
 
 void	rotate(t_stack *a) // move top of stack to bottom
@@ -81,22 +71,4 @@ void	push(t_stack *a, t_stack *b)
 	node->prev = NULL;
 	b->top = node;
 	b->size++;
-}
-
-void	ss(t_stack *a, t_stack *b)
-{
-	swap(a);
-	swap(b);
-}
-
-void	rr(t_stack *a, t_stack *b)
-{
-	rotate(a);
-	rotate(b);
-}
-
-void	rrr(t_stack *a, t_stack *b)
-{
-	rev_rotate(a);
-	rev_rotate(b);
 }

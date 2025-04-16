@@ -38,3 +38,43 @@ t_node	*create_node(int value)
 	node->next = NULL;
 	return (node);
 }
+
+void	free_stack(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*next;
+
+	if (!stack)
+		return ;
+	current = stack->top;
+	while (current)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	free(stack);
+}
+
+void	free_and_exit(t_stack *a)
+{
+	write(2, "Error\n", 6);
+	free_stack(a);
+	exit(EXIT_FAILURE);
+}
+
+void	push_bottom(t_stack *stack, t_node *new)
+{
+	if (!stack->bottom)
+	{
+		stack->top = new;
+		stack->bottom = new;
+	}
+	else
+	{
+		stack->bottom->next = new;
+		new->prev = stack->bottom;
+		stack->bottom = new;
+	}
+	stack->size++;
+}
